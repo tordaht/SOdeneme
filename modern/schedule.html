@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Schedule</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <style>
+    table {width:100%;border-collapse:collapse;margin-top:60px;}
+    th,td{border:1px solid #333;padding:0.5rem;text-align:center;}
+    td:hover{background:#222;cursor:pointer;}
+    .popup{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#1b1b1b;padding:1rem;border-radius:8px;display:none;}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">Renzo Gracie Istanbul</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="instructors.html">Instructors</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section>
+    <h1>Weekly Schedule</h1>
+    <table>
+      <tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th></tr>
+      <tr><td>10:00</td><td data-info="Fundamentals class with Coach A">Fundamentals</td><td></td><td data-info="Drills and technique">Drilling</td><td></td><td data-info="Open mat">Open Mat</td><td data-info="Competition training">Competition</td></tr>
+      <tr><td>18:00</td><td data-info="Nogi basics">Nogi</td><td data-info="Advanced gi techniques">Gi Advanced</td><td></td><td data-info="Sparring sessions">Sparring</td><td></td><td></td></tr>
+    </table>
+    <div class="popup" id="popup"></div>
+  </section>
+</main>
+<script>
+  document.querySelectorAll('td[data-info]').forEach(cell=>{
+    cell.addEventListener('click',()=>{
+      const popup=document.getElementById('popup');
+      popup.textContent=cell.dataset.info;
+      popup.style.display='block';
+      setTimeout(()=>popup.style.display='none',3000);
+    });
+  });
+</script>
+</body>
+</html>

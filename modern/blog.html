@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <style>
+    .posts{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:60px;padding:1rem;}
+    .post{background:#1b1b1b;padding:1rem;border-radius:8px;}
+    .post img{width:100%;border-radius:8px;}
+    @media(min-width:768px){.posts{grid-template-columns:repeat(2,1fr);}}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">Renzo Gracie Istanbul</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="instructors.html">Instructors</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="posts">
+    <div class="post">
+      <img src="https://via.placeholder.com/400x200" alt="">
+      <h2>Getting Started with Jiu-Jitsu</h2>
+      <p>Learn essential tips to begin your journey on the mats.</p>
+    </div>
+    <div class="post">
+      <img src="https://via.placeholder.com/400x200" alt="">
+      <h2>Why Consistency Matters</h2>
+      <p>Discover how regular practice accelerates your progress.</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
