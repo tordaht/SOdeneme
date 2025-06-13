@@ -15,4 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.menu-toggle').addEventListener('click', () => {
     navLinks.classList.toggle('open');
   });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
 });

@@ -1,7 +1,7 @@
 # Renzo Gracie Jiu-Jitsu Istanbul - Modern Site
 
 This directory contains a modern redesign of the Submission Only Istanbul website.
-It features a dark color scheme, responsive layout and simple JavaScript for interactive elements.
+It features a dark color scheme, responsive layout and simple JavaScript for interactive elements. Pages fade in as you scroll and the navigation adapts for mobile devices.
 
 Pages:
 - `index.html` – landing page with hero video and bento grid layout
